@@ -87,7 +87,6 @@ una nueva búsqueda.
 
 Se utilizó como herramienta de apoyo para:
 
-- Proponer código HTML, CSS y JavaScript.
 - Explicar el funcionamiento de las funciones.
 - Integrar la API Open-Meteo.
 - Revisar el manejo de errores.
