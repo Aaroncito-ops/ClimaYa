@@ -147,12 +147,15 @@ function mostrarClima(ciudad, clima) {
 formulario.addEventListener("submit", async function (evento) {
   evento.preventDefault();
 
-  const ciudad = campoCiudad.value.trim();
+ const ciudad = campoCiudad.value.trim();
+ // Ocultar los resultados de consultas anteriores
+ estadoInicial.hidden = false;
+ resultado.hidden = true;
 
-  if (ciudad.length < 2) {
-    mostrarMensaje("Escribe una ciudad válida.", true);
-    return;
-  }
+ if (ciudad.length < 2) {
+   mostrarMensaje("Escribe una ciudad válida.", true);
+   return;
+ }
 
   botonConsultar.disabled = true;
   botonConsultar.textContent = "Consultando...";
