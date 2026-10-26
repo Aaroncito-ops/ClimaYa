@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClimaYa | Consulta del clima</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <div class="contenedor">
+    <header class="encabezado">
+      <div class="logo">Clima<span>Ya</span></div>
+      <p>Tu clima en un instante</p>
+    </header>
+
+    <main class="principal">
+      <section class="bienvenida">
+        <p class="etiqueta">CONSULTA METEOROLÓGICA</p>
+        <h1>Descubre el clima de tu ciudad.</h1>
+        <p class="descripcion">
+          Consulta las condiciones del tiempo utilizando
+          información meteorológica actualizada.
+        </p>
+
+        <form id="formClima" class="buscador">
+          <label for="ciudad">Nombre de la ciudad</label>
+          <input
+            id="ciudad"
+            type="search"
+            placeholder="Ejemplo: Mérida"
+            autocomplete="off"
+            required
+          >
+          <button type="submit">Consultar clima</button>
+        </form>
+
+        <p id="mensaje" role="status" aria-live="polite"></p>
+      </section>
+
+      <section class="tarjeta-clima">
+        <p class="subtitulo">RESULTADO DE LA CONSULTA</p>
+
+        <div id="estadoInicial" class="estado-inicial">
+          <div class="simbolo">☀</div>
+          <h2>¿Cómo está el clima?</h2>
+          <p>Busca una ciudad para conocer el tiempo actual.</p>
+        </div>
+
+        <div id="resultado" hidden>
+          <h2 id="nombreCiudad"></h2>
+          <p id="temperatura" class="temperatura"></p>
+          <p id="descripcionClima"></p>
+
+          <div class="detalles">
+            <div>
+              <span>Sensación térmica</span>
+              <strong id="sensacion"></strong>
+            </div>
+            <div>
+              <span>Humedad</span>
+              <strong id="humedad"></strong>
+            </div>
+            <div>
+              <span>Viento</span>
+              <strong id="viento"></strong>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>ClimaYa · Datos proporcionados por Open-Meteo</p>
+    </footer>
+  </div>
+</body>
+</html>
